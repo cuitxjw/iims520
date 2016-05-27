@@ -31,6 +31,8 @@ public class UserModule {
 	public Object login(@Param("username")String username,@Param("password")String password,HttpSession session){
 		
 		User user = dao.fetch(User.class,Cnd.where("name","=",username).and("password","=",password));//这里的属性是针对对象的
+		checkUser(user,false);
+		
 		if(user==null){
 			return false;
 		}else{
