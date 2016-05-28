@@ -25,7 +25,6 @@ public class MainSetup implements Setup {
 		
 		if(dao.count(User.class)==0){
 			User user = new User();
-			user.setAge(33);
 			user.setName("admin");
 			user.setLoginName("admin");
 			user.setPassword("123456");

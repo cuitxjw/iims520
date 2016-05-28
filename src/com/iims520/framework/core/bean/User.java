@@ -7,7 +7,7 @@ import org.nutz.dao.entity.annotation.Id;
 import org.nutz.dao.entity.annotation.Name;
 import org.nutz.dao.entity.annotation.Table;
 
-@Table("i_user")
+@Table("t_user")
 public class User {
 	
 	@Id
@@ -21,13 +21,25 @@ public class User {
 	private String password;
 	
 	@Column
-	private String salt;
+	private String sex;
+	
+	@Column
+	private String idCard; //身份证号
+	
+	@Column
+	private String salt; //加密用的散列码
 	
 	@Column
 	private String loginName;
 	
 	@Column
-	private int age;
+	private String email;
+	
+	@Column
+	private String state; //状态 
+	
+	@Column
+	private Date birthDate;
 	
 	@Column
 	private String phone;
@@ -78,12 +90,46 @@ public class User {
 		this.loginName = loginName;
 	}
 
-	public int getAge() {
-		return age;
+	
+
+	public String getSex() {
+		return sex;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getIdCard() {
+		return idCard;
+	}
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	public String getPhone() {
