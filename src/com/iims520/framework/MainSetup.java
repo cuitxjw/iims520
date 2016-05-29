@@ -33,6 +33,8 @@ public class MainSetup implements Setup {
 			user.setUpdateTime(new Date());
 			dao.insert(user);
 		}
+		
+		
 	}
 
 }

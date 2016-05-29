@@ -4,16 +4,15 @@
 <form method="post" action="${ctx}/user/update?navTabId=userLiNav&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, navTabAjaxDone);">
 	<div class="pageFormContent" layoutH="97">
 		<input type="hidden" name="id" value="${user.id}"/>
+		<input type="hidden" name="password" value="${user.password}" />
 		<p>
-			<label>姓名</label><span class="unit">${user.name}</span>
+			<label>姓名</label>
+			<input type="text" name="name" readonly="readonly" class="unit" size="30" value="${user.name}"/>
 		</p>
+
 		<p>
-			<label>Password</label>
-			<input type="text" name="password" class="required" size="30" maxlength="20" value="${user.password}"/>
-		</p>
-		<p>
-			<label>Title</label>
-			<select name="sex">
+			<label>性别</label>
+			<select name="sex" class="combox">
 				<option value="M" ${'M' eq user.sex ? 'selected="selected"' : ''}>男</option>
 				<option value="W" ${'W' eq user.sex ? 'selected="selected"' : ''}>女</option>
 			</select>
@@ -40,35 +39,18 @@
 			<a class="inputDateButton" href="#">Choose</a>
 		</p>
 		<p>
-			<label>Status</label>
-			<select name="state">
-				<option value="ACTIVE" ${'ACTIVE' eq user.state ? 'selected="selected"' : ''}>ACTIVE</option>
-				<option value="INACTIVE" ${'INACTIVE' eq user.state ? 'selected="selected"' : ''}>INACTIVE</option>
+			<label>状态</label>
+			<select name="state" class="combox">
+				<option value="ACTIVE" ${'ACTIVE' eq user.state ? 'selected="selected"' : ''}>启用</option>
+				<option value="INACTIVE" ${'INACTIVE' eq user.state ? 'selected="selected"' : ''}>禁用</option>
 			</select>
 		</p>
-		
-
-		<%-- <div class="divider"></div>
-		
-		<table class="userRole">
-		<tr><th colspan="2">Roles</th></tr>
-		<c:forEach var="item" items="${allRoles}" varStatus="s">
-		<tr>
-			<td width="10">
-				<input type="checkbox" value="${item.id}" name="roleIds" id="userRole_${item.id}" ${elutil:contains(item, user.roles) ? "checked" : ""} />
-			</td>
-			<td><label for="userRole_${item.id}">${item.description}</label></td>
-		</tr>
-		</c:forEach>
-		</table> --%>
-		
-
 	</div>
 			
 	<div class="formBar">
 		<ul>
-			<li><div class="buttonActive"><div class="buttonContent"><button type="submit">Save</button></div></div></li>
-			<li><div class="button"><div class="buttonContent"><button type="button" class="close">Close</button></div></div></li>
+			<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="close">关闭</button></div></div></li>
 		</ul>
 	</div>
 </form>

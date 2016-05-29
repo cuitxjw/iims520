@@ -55,7 +55,7 @@ if ($.browser.msie) {
 					<li><a href="/">首页</a></li>
 					<li><a href="/management/user!editContext.do" target="dialog" mask="true">用户信息</a></li>
 					<li><a href="/management/index!editPwd.do" target="dialog" mask="true">修改密码</a></li>
-					<li><a href="/passport!logout.do">退出</a></li>
+					<li><a href="${ctx}/user/logout">退出</a></li>
 				</ul>
 				<ul class="themeList" id="themeList">
 					<li theme="default"><div class="selected">blue</div></li>

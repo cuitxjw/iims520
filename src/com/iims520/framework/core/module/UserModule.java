@@ -12,6 +12,7 @@ import org.nutz.dao.pager.Pager;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.lang.Strings;
+import org.nutz.lang.util.NutMap;
 import org.nutz.mvc.annotation.At;
 import org.nutz.mvc.annotation.Attr;
 import org.nutz.mvc.annotation.Fail;
@@ -36,16 +37,16 @@ public class UserModule {
 	
 	@At
 	public Object login(@Param("username")String username,@Param("password")String password,HttpSession session){
-		
+		NutMap re = new NutMap();
 		User user = dao.fetch(User.class,Cnd.where("name","=",username).and("password","=",password));//这里的属性是针对对象的
-		checkUser(user,false);
+		String msg = checkUser(user,false);
 		
 		if(user==null){
-			return false;
+			return re.setv("ok", false).setv("msg", msg);
 		}else{
 			session.setAttribute("me", user.getId());
 		}
-		return true;
+		return re.setv("ok", true);
 		
 	} 
 	
@@ -154,7 +155,7 @@ public class UserModule {
 	
 	protected String checkUser(User user, boolean create) {
         if (user == null) {
-            return "空对象";
+            return "用户不存在";
         }
         if (create) {
             if (Strings.isBlank(user.getName()) || Strings.isBlank(user.getPassword()))

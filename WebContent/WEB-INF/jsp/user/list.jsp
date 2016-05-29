@@ -43,8 +43,8 @@
 
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" target="navTab" rel="userNav" href="${ctx}/user/doAdd" title="Add new user"><span>添加</span></a></li>
-			<li><a class="edit" target="navTab" rel="userNav" href="${ctx}/user/doUpdate?id={slt_uid}" ><span>修改</span></a></li>
+			<li><a class="add" target="dialog" rel="userNav" href="${ctx}/user/doAdd" title="添加用户"><span>添加</span></a></li>
+			<li><a class="edit" target="dialog" rel="userNav" href="${ctx}/user/doUpdate?id={slt_uid}" ><span>修改</span></a></li>
 			<li><a class="delete" target="ajaxTodo" href="${ctx}/user/delete?id={slt_uid}" title="Are you sure remove?"><span>删除</span></a></li>
 			<li><a class="delete" target="selectedTodo" rel="ids" href="" ><span>批量删除</span></a></li>
 			<li class="line">line</li>

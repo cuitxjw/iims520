@@ -16,9 +16,11 @@ function login()
 		dataType : "json",
 		type : "POST",
 		data : $("#loginForm").serialize(),
-		success : function(msg){
-			 if(msg){
+		success : function(result){
+			 if(result.ok){
 				 window.location = "${ctx}/index";
+			 }else{
+				 alert(result.msg);
 			 }
 		},
 		error : function(request){

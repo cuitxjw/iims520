@@ -387,7 +387,7 @@ label.alt {display:block; overflow:hidden; position:absolute;line-height:20px}
 
 .button span, .buttonDisabled span, .buttonActive span,
 .button .buttonContent, .buttonHover, .buttonHover .buttonContent,
-.buttonActive .buttonContent, .buttonDisabled .buttonContent { float:left; display:block; overflow:hidden; height:25px; line-height:25px; font-weight:bold;}
+.buttonActive .buttonContent, .buttonDisabled .buttonContent { float:left; display:block; vertical-align:middle; overflow:hidden; height:25px; line-height:25px; font-weight:bold;}
 
 .button { background-position:0 0;}
 .button .buttonContent { padding:0 5px 0 0; background-position:100% -50px;}
@@ -410,7 +410,7 @@ label.alt {display:block; overflow:hidden; position:absolute;line-height:20px}
 .buttonDisabled .buttonContent { padding:0 5px 0 0; background-position:100% -450px;}
 
 .button button, .buttonHover button,
-.buttonActive button, .buttonDisabled button { width:auto; height:25px; margin:0; padding:0 0 5px 0; border:0; font-size:12px; font-weight:bold; background:none; cursor:pointer;}
+.buttonActive button, .buttonDisabled button { width:80px; height:25px;vertical-align:middle; margin:0; padding:0 0 5px 0; border:0; font-size:12px; font-weight:bold; background:none; cursor:pointer;}
 .buttonDisabled button { cursor:default;}
 
 /* ----------------------------------------------------------------- Pages */
@@ -517,7 +517,7 @@ fieldset legend {padding:2px; border:1px dotted #B8D0D6; font-weight: bold;}
 fieldset legend:hover {background-color: #dddddd;}
 
 .formBar { clear:both; padding:0 5px; height:30px; padding-top:5px; border-style:solid; border-width:1px 0 0 0;}
-.formBar ul { float:left;}
+.formBar ul { float:right;}
 .formBar li { float:left; margin-left:20px;}
 .divider { clear:both; display:block; overflow:hidden; text-indent:-1000px; width:auto; height:1px; padding:4px 0 0 0; margin-bottom:5px; border-style:dotted; border-width:0 0 1px 0;}
 
