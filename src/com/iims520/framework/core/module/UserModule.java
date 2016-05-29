@@ -52,9 +52,15 @@ public class UserModule {
 	
 	
 	@At
-	@Ok(">>:/")
 	public void logout(HttpSession session){
 		session.invalidate();
+		//NutMap re = new NutMap();
+		
+		//re.setv("statusCode", 200);
+		//re.setv("callbackType", "forward");
+		//re.setv("forwardUrl","");
+		
+		//return re;
 	}
 	
 	

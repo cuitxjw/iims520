@@ -43,6 +43,9 @@ $(function(){
 if ($.browser.msie) {
 	window.setInterval("CollectGarbage();", 10000);
 }
+function logout(){
+	window.location = "${ctx}/";
+}
 </script>
 </head>
 
@@ -53,9 +56,9 @@ if ($.browser.msie) {
 				<a class="logo" href="javascript:void(0)">Logo</a>
 				<ul class="nav">
 					<li><a href="/">首页</a></li>
-					<li><a href="/management/user!editContext.do" target="dialog" mask="true">用户信息</a></li>
-					<li><a href="/management/index!editPwd.do" target="dialog" mask="true">修改密码</a></li>
-					<li><a href="${ctx}/user/logout">退出</a></li>
+					<li><a href="${ctx}/user/info" target="dialog" mask="true">用户信息</a></li>
+					<li><a href="${ctx}/user/updatePwd" target="dialog" mask="true">修改密码</a></li>
+					<li><a href="${ctx}/user/logout" target="ajaxTodo" title="确定要退出么?" callback="logout">退出</a></li>
 				</ul>
 				<ul class="themeList" id="themeList">
 					<li theme="default"><div class="selected">blue</div></li>

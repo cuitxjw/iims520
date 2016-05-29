@@ -40,7 +40,7 @@ $(function(){
 	<div id="login">
 		<div id="login_header">
 			<h1 class="login_logo">
-				<a href="http://demo.dwzjs.com"><img src="themes/default/images/login_logo.gif" /></a>
+				<a href="http://demo.dwzjs.com"><img src="themes/default/images/login_logo.png" /></a>
 			</h1>
 			<div class="login_headerContent">
 				<div class="navList">
@@ -74,7 +74,7 @@ $(function(){
 					</div>
 				</form>
 			</div>
-			<div class="login_banner"><img src="themes/default/images/login_banner.jpg" /></div>
+			<div class="login_banner"><img src="themes/default/images/login_banner.png" /></div>
 			<div class="login_main">
 				<ul class="helpList">
 					<li><a href="#">忘记密码怎么办？</a></li>
