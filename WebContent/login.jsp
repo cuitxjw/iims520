@@ -32,7 +32,6 @@ function login()
 $(function(){
 	$("#login_bar").click(login);
 })
-
 </script>
 </head>
 

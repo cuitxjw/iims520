@@ -6,10 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.nutz.dao.Cnd;
-import org.nutz.dao.Dao;
 import org.nutz.dao.QueryResult;
 import org.nutz.dao.pager.Pager;
-import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.lang.Strings;
 import org.nutz.lang.util.NutMap;
@@ -19,6 +17,7 @@ import org.nutz.mvc.annotation.Fail;
 import org.nutz.mvc.annotation.Ok;
 import org.nutz.mvc.annotation.Param;
 
+import com.iims520.framework.core.BaseModule;
 import com.iims520.framework.core.bean.Hit;
 import com.iims520.framework.core.bean.PageParam;
 import com.iims520.framework.core.bean.User;
@@ -28,12 +27,7 @@ import com.iims520.framework.core.bean.User;
 @At("/user")
 @Ok("json")
 @Fail("http:500")
-public class UserModule {
-	
-	
-	
-	@Inject
-	private Dao dao;
+public class UserModule extends BaseModule {
 	
 	@At
 	public Object login(@Param("username")String username,@Param("password")String password,HttpSession session){
