@@ -104,7 +104,7 @@ function logout(){
 					<div class="accordionContent">
 						<ul class="tree treeFolder">
 							<li><a href="/management/website!edit.do" target="navTab" rel="website">系统参数配置</a></li>
-							<li><a href="/management/page!list.do" target="navTab" rel="pageLiNav">菜单配置</a></li>
+							<li><a href="${ctx}/menu/doAdd" target="navTab" rel="pageLiNav">菜单配置</a></li>
 						</ul>
 					</div>
 					<div class="accordionHeader">
