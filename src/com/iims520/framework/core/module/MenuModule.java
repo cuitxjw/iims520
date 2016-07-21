@@ -7,6 +7,11 @@ import org.nutz.mvc.annotation.Ok;
 
 import com.iims520.framework.core.BaseModule;
 
+/**
+ * 菜单管理 ，针对系统构建时，使用。
+ * @author Administrator
+ *
+ */
 @IocBean
 @At("/menu")
 @Ok("json")
@@ -16,7 +21,7 @@ public class MenuModule extends BaseModule{
 	@At
 	@Ok("jsp:jsp.menu.add")
 	public void doAdd(){
-		
+		//
 	}
 
 }
