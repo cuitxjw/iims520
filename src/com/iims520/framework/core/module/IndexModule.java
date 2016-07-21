@@ -10,11 +10,13 @@ import org.nutz.mvc.annotation.Ok;
 import org.nutz.mvc.view.JspView;
 import org.nutz.mvc.view.ViewWrapper;
 
+import com.iims520.framework.core.BaseModule;
+
 @IocBean
 @At("/")
 @Ok("jsp")
 @Fail("http:500")
-public class IndexModule {
+public class IndexModule extends BaseModule {
 	
 	private String title = "管理平台";
 	
