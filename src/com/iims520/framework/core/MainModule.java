@@ -15,5 +15,5 @@ import com.iims520.framework.MainSetup;
 @IocBy(type=ComboIocProvider.class,args={"*js","ioc/","*anno","com.iims520.framework.core","*tx"})
 public class MainModule {
 
-	 
+	   
 }

@@ -37,6 +37,9 @@ public class Menu extends BasePojo {
 	
 	@Column
 	private String classz;
+	
+	@Column
+	private String state;
 
 	public int getId() {
 		return id;
@@ -109,7 +112,14 @@ public class Menu extends BasePojo {
 	public void setClassz(String classz) {
 		this.classz = classz;
 	}
-	
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 	
 
 }
