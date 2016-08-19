@@ -58,9 +58,21 @@
 	</div>
 </div>
 <script type="text/javascript">
+
+var tree = $("#customTree > li ");
+var xx ;
+tree.contextMenu("customTreeCM",{
+	bindings:{
+		createCM :function(t,m){
+			xx = this;
+			alert(t.attr("tvalue"));
+		}
+	}
+});
+
 function doClick(){
 	var json = arguments[0], result="";
- 	alert(json.items[0]);
+ 	//alert(json.items[0]);
 
 	$(json.items).each(function(i){
 		result += "<p>name:"+this.name + " value:"+this.value+" text: "+this.text+"</p>";
