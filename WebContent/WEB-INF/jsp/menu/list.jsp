@@ -6,9 +6,9 @@
 		<form method="post" action="demo/common/ajaxDone.html"
 			class="pageForm required-validate"
 			onsubmit="return validateCallback(this)">
-			<ul class="tree treeFolder treeCheck expand" layoutH="62" id="customTree" 
+			<ul class="tree treeFolder  expand" layoutH="62" id="customTree" 
 				oncheck="doClick">
-				<li><a tname="name" tvalue="0">功能菜单树</a>
+				<li><a tname="name" tvalue="0" >功能菜单树</a>
 					<ul>
 						<li><a tname="name" tvalue="value1" checked="true"
 							href="menu/doAdd" target="ajax" rel="jbsxBox">用户管理</a>
@@ -52,20 +52,22 @@
 			</ul>
 		</div>
 	</div>
-
+		<a target="dialog" height="350" width="450" href="menu/doAdd" id="newMenu" style="display:none;">新建菜单</a>
 	<div id="jbsxBox" class="unitBox" style="margin-left: 246px;">
 		<!--#include virtual="list1.html" -->
 	</div>
 </div>
 <script type="text/javascript">
 
-var tree = $("#customTree > li ");
-var xx ;
+var tree = $("#customTree a");
+
 tree.contextMenu("customTreeCM",{
 	bindings:{
-		createCM :function(t,m){
-			xx = this;
-			alert(t.attr("tvalue"));
+		createCM :function(tree){
+			
+			//alert(tree.attr("tvalue"));
+			$("#newMenu").click();
+			
 		}
 	}
 });
@@ -77,6 +79,7 @@ function doClick(){
 	$(json.items).each(function(i){
 		result += "<p>name:"+this.name + " value:"+this.value+" text: "+this.text+"</p>";
 	});
+	//alert(result);
 	//$("#resultBox").html(result);
 	
 }

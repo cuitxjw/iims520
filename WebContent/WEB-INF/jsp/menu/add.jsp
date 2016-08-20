@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/common/taglibs.jsp"%>
-<div class="pageContent" layoutH="26" style="float:right; display:block; overflow:auto;  border:solid 1px #CCC; line-height:21px; background:#fff" >
+<div class="pageContent"  >
 <form method="post" action="${ctx}/menu/add?navTabId=userLiNav&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, navTabAjaxDone);">
-	<div class="pageFormContent" layoutH="82">
+	<div class="pageFormContent"  layoutH="58">
 	
 		<p>
 			<label>菜单名称</label>
