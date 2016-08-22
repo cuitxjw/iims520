@@ -40,6 +40,9 @@ public class Menu extends BasePojo {
 	
 	@Column
 	private String state;
+	
+	@Column
+	private int level;
 
 	public int getId() {
 		return id;
@@ -119,6 +122,22 @@ public class Menu extends BasePojo {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	public int getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(int parentId) {
+		this.parentId = parentId;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 	
 

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/common/taglibs.jsp"%>
 <div class="pageContent"  >
-<form method="post" action="${ctx}/menu/add?navTabId=userLiNav&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, navTabAjaxDone);">
+<form method="post" action="${ctx}/menu/add?navTabId=pageLiNav&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, navTabAjaxDone);">
 	<div class="pageFormContent"  layoutH="58">
 	
 		<p>
@@ -31,7 +31,8 @@
 		</p>
 		<p>
 			<label>上级菜单</label>
-			<input type="text" name="parent.id"  size="30" value=""/>
+			<input type="text" name="parentName"  size="30" value="${parentName}" disabled/>
+			<input type="hidden" name="parentId"    value="${parentId}"/>
 		</p>
 		<p>
 			<label>状态</label>
