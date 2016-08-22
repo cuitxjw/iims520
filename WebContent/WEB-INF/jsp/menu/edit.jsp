@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/common/taglibs.jsp"%>
 
-<form method="post" action="${ctx}/menu/update?navTabId=pageLiNav&&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, navTabAjaxDone);">
+<form method="post" action="${ctx}/menu/update?navTabId=pageLiNav&&callbackType=closeCurrent" class="required-validate pageForm" onsubmit="return validateCallback(this, refreshCallback);">
 <div class="pageContent" layoutH="26" style="float:right; display:block; overflow:auto;  border:solid 1px #CCC; line-height:21px; background:#fff" >
 	<div class="pageFormContent" layoutH="82">
 	
@@ -32,7 +32,7 @@
 		</p>
 		<p>
 			<label>上级菜单</label>
-			<input type="text" name="parentName"  size="30" value="${menu.parent.name}"  disabled  />
+			<input type="text" name="parentName"  size="30" value="${parentName}"  disabled  />
 			<input type="hidden" name="parentId"  size="30" value="${menu.parentId}"  />
 			<input type="hidden" name="id"  size="30" value="${menu.id}"  />
 		</p>
@@ -52,3 +52,10 @@
 	</div>
 	</div>
 </form>
+<script type="text/javascript">
+function refreshCallback(){
+	var frm = $("#treeForm");
+	//navTabAjaxDone();
+	return navTabSearch(frm,"pageLiNav");
+}
+</script >

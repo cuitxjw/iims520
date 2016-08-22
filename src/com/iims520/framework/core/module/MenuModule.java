@@ -58,6 +58,11 @@ public class MenuModule extends BaseModule{
 		Menu m = dao.fetch(Menu.class,id);
 		dao.fetchLinks(m, "parent"); //获取对应的关联对象
 		req.setAttribute("menu",m);
+		String parentName ="顶级菜单";
+		if(m.getParentId()>0){
+			parentName = m.getParent().getName();
+		}
+		req.setAttribute("parentName", parentName);
 	}
 	
 	@At

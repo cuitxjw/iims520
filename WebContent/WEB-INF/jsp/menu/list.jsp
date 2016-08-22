@@ -1,11 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/common/taglibs.jsp"%>
-<div style="padding: 5px;">
+<form method="post" action="${ctx}/menu/doList" id="treeForm" onsubmit="return navTabSearch(this)">
+<div style="padding: 5px;" class="pageContent">
 	<div layoutH="26"
 		style="float: left; display: block; overflow: auto; width: 240px; border: solid 1px #CCC; line-height: 21px; background: #fff">
-		<form method="post" action="menu/doList" id="treeForm"
-			onsubmit="return navTabSearch(this)">
-			<button type="submit" style="display:none;"></button>
+		
 			<ul class="tree treeFolder " layoutH="62" id="customTree" >
 				<li><a tname="顶级菜单" tvalue="0" >功能菜单树</a>
 					<ul>
@@ -27,13 +26,14 @@
 					</c:forEach>
 			</ul>
 
-		</form>
 	</div>
-		<a target="dialog" height="350" width="450" href="" id="newMenu" style="display:none;">新建菜单</a>
+		<a target="dialog" height="350" width="450" href="" rel="pageNav" mask="true" id="newMenu" style="display:none;">新建菜单</a>
 	<div id="jbsxBox" class="unitBox" style="margin-left: 246px;">
 		<!--#include virtual="list1.html" -->
 	</div>
 </div>
+
+</form>
 <script type="text/javascript">
 
 var tree = $("#customTree a");
